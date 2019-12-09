@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Todo } from '@stylzz/data';
 
-interface Todo {
-  title: string;
-}
+// interface Todo {
+//   title: string;
+// }
 
 @Component({
   selector: 'stylzz-root',
@@ -23,8 +24,12 @@ export class AppComponent {
   }
 
   addTodo() {
-    this.todos.push({
-      title: `New todo ${Math.floor(Math.random() * 1000)}`
+    // this.todos.push({
+    //   title: `New todo ${Math.floor(Math.random() * 1000)}`
+    // });
+
+    this.http.post('/api/addTodo', {}).subscribe(() => {
+      this.fetch();
     });
   }
 }

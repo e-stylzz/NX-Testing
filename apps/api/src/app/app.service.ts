@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
+import { Todo } from '@stylzz/data';
 
-interface Todo {
-  title: string;
-}
+// interface Todo {
+//   title: string;
+// }
 
 @Injectable()
 export class AppService {

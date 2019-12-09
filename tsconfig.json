@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@stylzz/data": ["libs/data/src/index.ts"]
+      "@stylzz/data": ["libs/data/src/index.ts"],
+      "@stylzz/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

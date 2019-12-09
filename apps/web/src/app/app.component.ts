@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 
+interface Todo {
+  title: string;
+}
+
 @Component({
   selector: 'stylzz-root',
   templateUrl: './app.component.html',
@@ -7,4 +11,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'web';
+
+  todos: Todo[] = [{ title: 'Todo 1' }, { title: 'Todo 2' }];
+
+  addTodo() {
+    this.todos.push({
+      title: `New todo ${Math.floor(Math.random() * 1000)}`
+    });
+  }
 }
